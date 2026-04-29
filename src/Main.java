@@ -68,8 +68,6 @@ public class Main {
                 int asciValue=arr[i]+1;
                 sb.append((char)asciValue);
             }
-
-
         }
         return sb.toString();
     }
@@ -95,6 +93,7 @@ public class Main {
         }
         return sum;
     }
+
     public static int numbersNotBelowZeroCorrection(int[][] matrix) {
         int sum = 0;
         for (int j = 0; j < matrix[0].length; j++) { // Column outer loop
@@ -105,6 +104,7 @@ public class Main {
         }
         return sum;
     }
+
 
     public static boolean serieIncreased(int[] arr){
         for(int i=0;i<arr.length-2;i++){

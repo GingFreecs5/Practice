@@ -38,7 +38,7 @@ public class SlidingWindow {
             for (int right = 0; right < s.length(); right++) {
                 char rightChar = s.charAt(right);
                 charCount.put(rightChar, charCount.getOrDefault(rightChar, 0) + 1);
-
+                charCount.merge(rightChar,1,Integer::sum);
                 // Shrink window if more than k distinct characters
                 while (charCount.size() > k) {
                     char leftChar = s.charAt(left);
